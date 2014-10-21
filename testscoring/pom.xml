@@ -1,0 +1,44 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  	<parent>
+		<groupId>org.opentestsystem.shared</groupId>
+		<artifactId>shared-master</artifactId>
+		<version>1.0.1</version>
+	</parent>
+
+	<groupId>org.opentestsystem.delivery</groupId>
+	<artifactId>testscoring</artifactId>
+	<version>0.0.1</version>
+	<packaging>jar</packaging>
+	
+	<properties>
+		<item-scoring.version>1.1.0</item-scoring.version>
+		<resource-bundler.version>0.0.1</resource-bundler.version>
+		<item-selection.version>0.0.1</item-selection.version>
+	</properties>
+	
+	<name>TDS.TestScoring</name>
+	<url>http://maven.apache.org</url>
+	<dependencies>
+		<dependency>
+			<groupId>org.opentestsystem.shared</groupId>
+			<artifactId>shared-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.opentestsystem.shared</groupId>
+			<artifactId>shared-xml</artifactId>
+		</dependency>
+		<dependency>
+    		<groupId>org.opentestsystem.delivery</groupId>
+    		<artifactId>tds-itemselection-aironline</artifactId>
+    		<version>${item-selection.version}</version>
+    	</dependency>
+		<dependency>
+			<groupId>org.opentestsystem.delivery</groupId>
+			<artifactId>item-scoring-api</artifactId>
+			<version>${item-scoring.version}</version>
+		</dependency>
+	</dependencies>
+</project>

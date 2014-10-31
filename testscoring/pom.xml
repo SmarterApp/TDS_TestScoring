@@ -10,7 +10,7 @@
 
 	<groupId>org.opentestsystem.delivery</groupId>
 	<artifactId>testscoring</artifactId>
-	<version>R01.00.04</version>
+	<version>0.0.1</version>
 	<packaging>jar</packaging>
 	
 	<properties>

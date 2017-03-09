@@ -14,7 +14,7 @@
 	<packaging>jar</packaging>
 	
 	<properties>
-		<item-scoring.version>1.1.0-SNAPSHOT</item-scoring.version>
+		<item-scoring.version>3.0.0</item-scoring.version>
 		<item-selection.version>0.0.1-SNAPSHOT</item-selection.version>
 	</properties>
 	

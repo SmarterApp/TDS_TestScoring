@@ -9,7 +9,7 @@
 
 	<groupId>org.opentestsystem.delivery</groupId>
 	<artifactId>testscoring</artifactId>
-	<version>3.0.0</version>
+	<version>3.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 	
 	<properties>
@@ -77,7 +77,7 @@
 		<connection>scm:git:https://github.com/SmarterApp/TDS_TestScoring.git</connection>
 		<developerConnection>scm:git:git://github.com/SmarterApp/TDS_TestScoring.git</developerConnection>
 		<url>https://github.com/SmarterApp/TDS_TestScoring</url>
-		<tag>3.0.0</tag>
+		<tag>HEAD</tag>
 	</scm>
 
 	<distributionManagement>

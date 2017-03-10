@@ -15,7 +15,7 @@
 	
 	<properties>
 		<item-scoring.version>3.0.0</item-scoring.version>
-		<item-selection.version>0.0.1-SNAPSHOT</item-selection.version>
+		<item-selection.version>3.0.0</item-selection.version>
 	</properties>
 	
 	<name>TDS.TestScoring</name>

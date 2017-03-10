@@ -10,7 +10,7 @@
 
 	<groupId>org.opentestsystem.delivery</groupId>
 	<artifactId>testscoring</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>3.0.0-SNAPSHOT</version>
 	<packaging>jar</packaging>
 	
 	<properties>
@@ -40,4 +40,42 @@
 			<version>${item-scoring.version}</version>
 		</dependency>
 	</dependencies>
+
+	<profiles>
+		<profile>
+			<id>release</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-source-plugin</artifactId>
+						<executions>
+							<execution>
+								<id>attach-sources</id>
+								<goals>
+									<goal>jar</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
+
+	<scm>
+		<connection>scm:git:https://github.com/SmarterApp/TDS_TestScoring.git</connection>
+		<developerConnection>scm:git:git://github.com/SmarterApp/TDS_TestScoring.git</developerConnection>
+		<url>https://github.com/SmarterApp/TDS_TestScoring</url>
+		<tag>HEAD</tag>
+	</scm>
+
+	<distributionManagement>
+		<repository>
+			<id>central</id>
+			<name>airdev-releases</name>
+			<url>https://airdev.jfrog.io/airdev/libs-releases-local</url>
+		</repository>
+	</distributionManagement>
+
 </project>

@@ -1,22 +1,20 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   	<parent>
 		<groupId>org.opentestsystem.shared</groupId>
 		<artifactId>shared-master</artifactId>
-		<version>1.0.1</version>
+		<version>3.1.0.RELEASE</version>
 	</parent>
 
 	<groupId>org.opentestsystem.delivery</groupId>
 	<artifactId>testscoring</artifactId>
-	<version>0.0.1</version>
+	<version>3.1.0.RELEASE</version>
 	<packaging>jar</packaging>
 	
 	<properties>
-		<item-scoring.version>1.1.0</item-scoring.version>
-		<resource-bundler.version>0.0.1</resource-bundler.version>
-		<item-selection.version>0.0.1</item-selection.version>
+		<item-scoring.version>3.1.0.RELEASE</item-scoring.version>
+		<item-selection.version>3.1.0.RELEASE</item-selection.version>
 	</properties>
 	
 	<name>TDS.TestScoring</name>
@@ -41,4 +39,52 @@
 			<version>${item-scoring.version}</version>
 		</dependency>
 	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-release-plugin</artifactId>
+				<version>2.5.3</version>
+			</plugin>
+		</plugins>
+	</build>
+
+	<profiles>
+		<profile>
+			<id>release</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-source-plugin</artifactId>
+						<executions>
+							<execution>
+								<id>attach-sources</id>
+								<goals>
+									<goal>jar</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
+
+	<scm>
+		<connection>scm:git:https://github.com/SmarterApp/TDS_TestScoring.git</connection>
+		<developerConnection>scm:git:git://github.com/SmarterApp/TDS_TestScoring.git</developerConnection>
+		<url>https://github.com/SmarterApp/TDS_TestScoring</url>
+		<tag>3.1.0.RELEASE</tag>
+	</scm>
+
+	<distributionManagement>
+		<repository>
+			<id>central</id>
+			<name>airdev-releases</name>
+			<url>https://airdev.jfrog.io/airdev/libs-releases-local</url>
+		</repository>
+	</distributionManagement>
+
 </project>
